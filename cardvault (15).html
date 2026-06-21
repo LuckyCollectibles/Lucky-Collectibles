@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lucky Collectibles — TCG Shop</title>
+<link rel="preconnect" href="https://pbvxamtepdwdiodkvgxa.supabase.co">
+<link rel="dns-prefetch" href="https://pbvxamtepdwdiodkvgxa.supabase.co">
+<link rel="preconnect" href="https://esm.sh" crossorigin>
+<link rel="dns-prefetch" href="https://esm.sh">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0f0f1a;color:#e0e0e0;min-height:100vh;padding:1.25rem}
+  .wrap{max-width:960px;margin:0 auto}
+  .header{background:#1a1a2e;padding:1.75rem 1.5rem 1.5rem;text-align:center;border-radius:14px;margin-bottom:1.25rem;background-image:url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjgwIiBoZWlnaHQ9IjI1MiIgdmlld0JveD0iMCAwIDY4MCAyNTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9ImNvdmVyQmciIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgo8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMTUxNTJhIi8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBiMGIxNCIvPgo8L2xpbmVhckdyYWRpZW50Pgo8bGluZWFyR3JhZGllbnQgaWQ9ImdvbGRMaW5lIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIwJSI+CjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNiZjk1M2YiLz4KPHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiNmNGQ1OGQiLz4KPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjYmY5NTNmIi8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjY4MCIgaGVpZ2h0PSIyNTIiIGZpbGw9InVybCgjY292ZXJCZykiLz4KPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNzAsMjAwKSByb3RhdGUoLTIyKSIgb3BhY2l0eT0iMC41Ij4KPHJlY3QgeD0iLTMwIiB5PSItNTUiIHdpZHRoPSI2MCIgaGVpZ2h0PSI4NCIgcng9IjYiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2U5NDU2MCIgc3Ryb2tlLXdpZHRoPSIyIi8+CjwvZz4KPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTIwLDYwKSByb3RhdGUoMTUpIiBvcGFjaXR5PSIwLjQiPgo8cmVjdCB4PSItMjYiIHk9Ii00NiIgd2lkdGg9IjUyIiBoZWlnaHQ9Ijc0IiByeD0iNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZjRkNThkIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9nPgo8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2MDAsMjEwKSByb3RhdGUoMjApIiBvcGFjaXR5PSIwLjUiPgo8cmVjdCB4PSItMjgiIHk9Ii01MCIgd2lkdGg9IjU2IiBoZWlnaHQ9IjgwIiByeD0iNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZTk0NTYwIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9nPgo8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1NjAsNDApIHJvdGF0ZSgtMTIpIiBvcGFjaXR5PSIwLjQiPgo8cmVjdCB4PSItMjQiIHk9Ii00MiIgd2lkdGg9IjQ4IiBoZWlnaHQ9IjY4IiByeD0iNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZjRkNThkIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9nPgo8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0MCwzMCkgcm90YXRlKDgpIiBvcGFjaXR5PSIwLjM1Ij4KPHJlY3QgeD0iLTIyIiB5PSItMzgiIHdpZHRoPSI0NCIgaGVpZ2h0PSI2MiIgcng9IjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzdlYzhlMyIgc3Ryb2tlLXdpZHRoPSIyIi8+CjwvZz4KPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNjMwLDEyMCkgcm90YXRlKC0zMCkiIG9wYWNpdHk9IjAuMzUiPgo8cmVjdCB4PSItMjIiIHk9Ii0zOCIgd2lkdGg9IjQ0IiBoZWlnaHQ9IjYyIiByeD0iNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjN2VjOGUzIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9nPgo8L3N2Zz4K');background-size:cover;background-position:center}
+  .logo{font-size:26px;font-weight:600;color:#fff;letter-spacing:2px;margin-bottom:.2rem}
+  .logo span{color:#e94560}
+  .tagline{font-size:12px;color:rgba(255,255,255,.5)}
+  .lang-bar{display:flex;justify-content:center;gap:8px;margin-top:1rem}
+  .lang-btn{padding:5px 15px;border-radius:20px;border:1.5px solid rgba(255,255,255,.2);background:transparent;color:rgba(255,255,255,.6);font-size:11px;cursor:pointer;transition:.15s}
+  .lang-btn.active{background:#e94560;border-color:#e94560;color:#fff}
+  .top-bar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:.85rem;position:sticky;top:0;z-index:100;background:#0f0f1a;padding:.6rem 0;border-bottom:1px solid #1e1e30}
+  .search-wrap{flex:1;min-width:160px;position:relative;display:flex;align-items:center}
+  .search-input{width:100%;padding:7px 34px 7px 12px;border-radius:8px;border:1px solid #2a2a3e;background:#1a1a2e;color:#e0e0e0;font-size:13px;outline:none}
+  .search-input:focus{border-color:#e94560}
+  .search-input::placeholder{color:#555}
+  .search-icon{position:absolute;right:10px;top:50%;transform:translateY(-50%);color:#555;pointer-events:none}
+  .filter-btn{padding:6px 14px;border-radius:20px;border:1px solid #2a2a3e;background:#1a1a2e;color:#aaa;font-size:11px;cursor:pointer;transition:.15s;white-space:nowrap;position:relative}
+  .filter-btn:hover{border-color:#444}
+  .filter-btn.active{background:#e94560;border-color:#e94560;color:#fff}
+  .grade-filter-btn{padding:6px 14px;border-radius:20px;border:1px solid #2a2a3e;background:#1a1a2e;color:#aaa;font-size:11px;cursor:pointer;transition:.15s;white-space:nowrap;display:flex;align-items:center;gap:4px}
+  .grade-filter-btn:hover{border-color:#444}
+  .grade-filter-btn.active{background:#6a3aa0;border-color:#6a3aa0;color:#fff}
+  .add-btn{padding:6px 14px;border-radius:20px;border:1px solid #e94560;background:transparent;color:#e94560;font-size:11px;cursor:pointer;white-space:nowrap;display:flex;align-items:center;gap:5px;transition:.15s}
+  .add-btn:hover{background:#e94560;color:#fff}
+  .lock-btn{padding:6px 14px;border-radius:20px;border:1px solid #2a2a3e;background:#1a1a2e;color:#aaa;font-size:11px;cursor:pointer;display:flex;align-items:center;gap:5px;white-space:nowrap;transition:.15s}
+  .lock-btn.unlocked{border-color:#3a6a3a;color:#6abf69}
+  .account-btn{padding:6px 14px;border-radius:20px;border:1px solid #2a2a3e;background:#1a1a2e;color:#aaa;font-size:11px;cursor:pointer;display:flex;align-items:center;gap:5px;white-space:nowrap;transition:.15s}
+  .account-btn.logged-in{border-color:#3a6a8a;color:#7ec8e3}
+  .fav-heart-row{margin-bottom:7px}
+  .fav-heart-btn{width:30px;height:26px;border-radius:8px;background:#12122a;border:1px solid #2a2a3e;color:#fff;font-size:13px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.15s}
+  .fav-heart-btn:hover{border-color:#e94560;transform:scale(1.05)}
+  .fav-heart-btn.favorited{color:#ff4d6d;border-color:#5a2030}
+  .section-title{font-size:10px;font-weight:600;color:#555;text-transform:uppercase;letter-spacing:.8px;margin-bottom:.75rem}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+  @media(max-width:700px){.grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:360px){.grid{grid-template-columns:repeat(1,1fr)}}
+  .grid.compact{grid-template-columns:repeat(8,1fr);gap:.6rem}
+  @media(max-width:700px){.grid.compact{grid-template-columns:repeat(4,1fr)}}
+  @media(max-width:360px){.grid.compact{grid-template-columns:repeat(2,1fr)}}
+  .grid.compact .card-name{font-size:11px}
+  .grid.compact .card-meta{font-size:9px}
+  .grid.compact .card-price{font-size:12px}
+  .grid.compact .card-price-alt{font-size:12px}
+  .grid.compact .card-body{padding:.5rem .55rem}
+  .grid.compact .btn-fb{font-size:9px;padding:6px 2px}
+  .grid.compact .btn-edit,.grid.compact .btn-del{padding:6px 7px;font-size:11px}
+  .grid.compact .fav-heart-btn{width:24px;height:22px;font-size:11px}
+  .view-toggle-btn{padding:6px 14px;border-radius:20px;border:1px solid #2a2a3e;background:#1a1a2e;color:#aaa;font-size:11px;cursor:pointer;display:flex;align-items:center;gap:5px;white-space:nowrap;transition:.15s}
+  .view-toggle-btn:hover{border-color:#444}
+  .view-toggle-btn.active{background:#3a6a8a;border-color:#3a6a8a;color:#fff}
+  .card{background:#1a1a2e;border:1px solid #2a2a3e;border-radius:12px;overflow:hidden;transition:.15s;display:flex;flex-direction:column}
+  .card:hover{border-color:#3a3a5e}
+  .card-img-wrap{width:100%;padding-top:140%;position:relative;background:#12122a;border-bottom:1px solid #2a2a3e;overflow:hidden;cursor:pointer}
+  .card-img-wrap:hover .img-zoom-hint{opacity:1}
+  .img-zoom-hint{position:absolute;bottom:6px;right:6px;background:rgba(0,0,0,.6);color:#fff;font-size:9px;padding:2px 6px;border-radius:6px;opacity:0;transition:.2s;z-index:3;pointer-events:none}
+  .slider-track{position:absolute;inset:0;display:flex;transition:transform .3s ease}
+  .slide{min-width:100%;height:100%;position:relative;flex-shrink:0}
+  .slide img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+  .slide .placeholder-icon{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:32px;color:#2a2a4e}
+  .series-badge{position:absolute;top:7px;left:7px;font-size:9px;padding:2px 8px;border-radius:10px;font-weight:600;z-index:4}
+  .badge-pokemon{background:#FAEEDA;color:#633806}
+  .badge-onepiece{background:#FCEBEB;color:#501313}
+  .badge-yugioh{background:#EEEDFE;color:#26215C}
+  .badge-other{background:#E1F5EE;color:#085041}
+  .grade-badge{position:absolute;top:7px;right:7px;font-size:9px;padding:2px 8px;border-radius:10px;font-weight:600;z-index:4;background:#2a1a4e;color:#c9a8ff}
+  .slide-counter{position:absolute;bottom:6px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.6);color:#fff;font-size:9px;padding:2px 7px;border-radius:8px;z-index:4;white-space:nowrap}
+  .slide-arrow{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.55);color:#fff;border:none;border-radius:50%;width:22px;height:22px;font-size:12px;cursor:pointer;z-index:5;display:flex;align-items:center;justify-content:center;transition:.15s}
+  .slide-arrow:hover{background:rgba(0,0,0,.85)}
+  .slide-arrow.left{left:5px}
+  .slide-arrow.right{right:5px}
+  .card-body{padding:.7rem .85rem;flex:1;display:flex;flex-direction:column}
+  .card-name{font-size:13px;font-weight:600;color:#e0e0e0;margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .card-meta{font-size:10px;color:#fff;margin-bottom:6px}
+  .card-price{font-size:14px;font-weight:600;color:#e94560;margin-bottom:1px}
+  .card-price-alt{font-size:14px;font-weight:600;color:#e94560;margin-bottom:7px}
+  .status-row{margin-bottom:7px;display:flex;align-items:center;justify-content:space-between}
+  .status-pill{font-size:9px;padding:3px 10px;border-radius:10px;border:none;font-weight:600;transition:.15s}
+  .status-pill.clickable{cursor:pointer}
+  .status-available{background:#1a3a1a;color:#6abf69}
+  .status-sold{background:#3a1a1a;color:#e94560}
+  .btn-row{display:flex;gap:5px;align-items:center;margin-top:auto}
+  .btn-fb{flex:1;padding:7px 4px;border-radius:7px;border:none;background:#1877F2;color:#fff;font-size:10px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:4px;text-decoration:none;transition:.15s;font-weight:500;white-space:nowrap}
+  .btn-fb:hover{background:#1565d8}
+  .btn-fb.disabled{opacity:.35;pointer-events:none}
+  .btn-edit{padding:7px 9px;border-radius:7px;border:none;background:#2a2a4e;color:#a0a0ff;font-size:12px;cursor:pointer;display:flex;align-items:center;transition:.15s;flex-shrink:0}
+  .btn-edit:hover{background:#3a3a6e}
+  .btn-del{padding:7px 9px;border-radius:7px;border:none;background:#3a1a2a;color:#e94560;font-size:12px;cursor:pointer;display:flex;align-items:center;transition:.15s;flex-shrink:0}
+  .btn-del:hover{background:#5a1a2a}
+  .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:2000;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px}
+  .lightbox.hidden{display:none}
+  .lb-img-wrap{position:relative;max-width:90vw;max-height:80vh;overflow:hidden;cursor:grab;user-select:none}
+  .lb-img-wrap.grabbing{cursor:grabbing}
+  .lb-img{max-width:90vw;max-height:80vh;object-fit:contain;display:block;transform-origin:center center;transition:transform .2s;pointer-events:none}
+  .lb-controls{display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:center}
+  .lb-btn{background:rgba(255,255,255,.12);color:#fff;border:none;border-radius:8px;padding:7px 14px;font-size:13px;cursor:pointer;transition:.15s}
+  .lb-btn:hover{background:rgba(255,255,255,.25)}
+  .lb-close{position:absolute;top:14px;right:14px;background:rgba(255,255,255,.15);color:#fff;border:none;border-radius:50%;width:34px;height:34px;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+  .lb-close:hover{background:rgba(255,255,255,.3)}
+  .lb-counter{color:#aaa;font-size:12px}
+  .lb-nav{display:flex;gap:8px}
+  .lb-nav-btn{background:rgba(255,255,255,.12);color:#fff;border:none;border-radius:8px;padding:7px 16px;font-size:16px;cursor:pointer;transition:.15s}
+  .lb-nav-btn:hover{background:rgba(255,255,255,.25)}
+  .overlay{position:fixed;inset:0;background:rgba(0,0,0,.8);display:flex;align-items:center;justify-content:center;z-index:999;padding:1rem}
+  .modal{background:#1a1a2e;border-radius:14px;padding:1.5rem;max-width:420px;width:100%;border:1px solid #2a2a3e;max-height:92vh;overflow-y:auto}
+  .modal-title{font-size:15px;font-weight:600;margin-bottom:1rem;color:#e0e0e0}
+  .form-group{margin-bottom:.8rem}
+  .form-label{font-size:11px;color:#888;margin-bottom:4px;display:block}
+  .form-input,.form-select{width:100%;padding:8px 10px;border-radius:8px;border:1px solid #2a2a3e;background:#12122a;color:#e0e0e0;font-size:13px;outline:none;transition:.15s}
+  .form-input:focus,.form-select:focus{border-color:#e94560}
+  .form-select option{background:#1a1a2e}
+  .price-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .img-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+  @media(max-width:420px){.img-grid{grid-template-columns:repeat(3,1fr)}}
+  .img-slot{position:relative;width:100%;padding-top:100%;border:2px dashed #2a2a3e;border-radius:8px;overflow:hidden;background:#12122a}
+  .img-slot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .img-slot .img-clear{position:absolute;top:2px;right:2px;background:rgba(0,0,0,.7);color:#fff;border:none;border-radius:50%;width:18px;height:18px;font-size:10px;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2}
+  .img-add-slot{position:relative;width:100%;padding-top:100%;border:2px dashed #2a2a3e;border-radius:8px;cursor:pointer;background:#12122a;transition:.15s}
+  .img-add-slot:hover{border-color:#e94560}
+  .img-add-slot input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+  .img-add-icon{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:26px;color:#555;pointer-events:none}
+  .img-count-label{font-size:10px;color:#666;margin-top:6px;text-align:center}
+  .modal-btns{display:flex;gap:8px;margin-top:1rem}
+  .btn-save{flex:1;padding:9px;border-radius:8px;border:none;background:#e94560;color:#fff;font-size:13px;cursor:pointer;font-weight:600}
+  .btn-save:hover{background:#c73652}
+  .btn-cancel{flex:1;padding:9px;border-radius:8px;border:1px solid #2a2a3e;background:transparent;color:#aaa;font-size:13px;cursor:pointer}
+  .pw-hint{font-size:11px;color:#e94560;margin-top:5px;min-height:15px}
+  .fb-links{display:flex;flex-direction:column;gap:8px}
+  .fb-link-btn{padding:10px;border-radius:8px;border:none;background:#1877F2;color:#fff;font-size:13px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-weight:500}
+  .fb-link-btn:hover{background:#1565d8}
+  .btn-close-modal{width:100%;padding:8px;border-radius:8px;border:1px solid #2a2a3e;background:transparent;color:#aaa;font-size:12px;cursor:pointer;margin-top:8px}
+  .contact-sub{font-size:12px;color:#888;margin-bottom:1rem}
+  .empty{text-align:center;padding:3rem;color:#444;font-size:13px;grid-column:1/-1}
+  .loading{text-align:center;padding:3rem;color:#555;font-size:13px;grid-column:1/-1}
+  .footer{text-align:center;font-size:10px;color:#444;margin-top:1.5rem;padding-top:1rem;border-top:1px solid #1e1e30}
+  .hidden{display:none!important}
+  .toast{position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%);background:#1a3a1a;color:#6abf69;padding:8px 20px;border-radius:20px;font-size:12px;font-weight:600;z-index:9999;opacity:0;transition:opacity .3s;pointer-events:none;white-space:nowrap}
+  .toast.show{opacity:1}
+  .toast.error{background:#3a1a1a;color:#e94560}
+
+  /* GRADE FILTER POPUP */
+  .grade-popup-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:1800;display:flex;align-items:center;justify-content:center;padding:1rem}
+  .grade-popup-overlay.hidden{display:none}
+  .grade-popup{background:#1a1a2e;border-radius:14px;padding:1.5rem;max-width:380px;width:100%;border:1px solid #2a2a3e;max-height:85vh;overflow-y:auto}
+  .grade-popup-title{font-size:15px;font-weight:600;margin-bottom:1rem;color:#fff}
+  .grade-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+  .grade-option{padding:10px 8px;border-radius:9px;border:1px solid #2a2a3e;background:#12122a;color:#ddd;font-size:13px;cursor:pointer;transition:.15s;text-align:center;font-weight:500}
+  .grade-option:hover{border-color:#6a3aa0;background:#241836}
+  .grade-option.selected{background:#6a3aa0;border-color:#6a3aa0;color:#fff}
+  .grade-clear-btn{width:100%;margin-top:1rem;padding:9px;border-radius:8px;border:1px solid #2a2a3e;background:transparent;color:#aaa;font-size:13px;cursor:pointer}
+  .grade-clear-btn:hover{border-color:#555;color:#fff}
+
+  @media(max-width:500px){body{padding:.75rem}}
+
+  /* SCROLL TO TOP */
+  .scroll-top-btn{position:fixed;bottom:24px;right:24px;width:48px;height:48px;border-radius:50%;background:#e94560;color:#fff;border:none;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.4);z-index:500;opacity:0;transform:translateY(20px);pointer-events:none;transition:opacity .25s,transform .25s}
+  .scroll-top-btn.show{opacity:1;transform:translateY(0);pointer-events:auto}
+  .scroll-top-btn:hover{background:#c73652}
+
+  /* ACCOUNT MODAL */
+  .auth-tabs{display:flex;gap:6px;margin-bottom:1rem}
+  .auth-tab{flex:1;padding:8px;border-radius:8px;border:1px solid #2a2a3e;background:#12122a;color:#aaa;font-size:12px;cursor:pointer;transition:.15s}
+  .auth-tab.active{background:#e94560;border-color:#e94560;color:#fff}
+  .account-info{text-align:center;padding:.5rem 0}
+  .account-email{font-size:13px;color:#fff;margin-bottom:1rem;word-break:break-all}
+  .fav-list-mini{max-height:280px;overflow-y:auto;margin-top:.5rem}
+  .fav-mini-item{display:flex;align-items:center;gap:10px;padding:8px;border-radius:8px;background:#12122a;margin-bottom:6px;cursor:pointer;transition:.15s}
+  .fav-mini-item:hover{background:#1a1a3a}
+  .fav-mini-img{width:36px;height:50px;border-radius:4px;object-fit:cover;background:#1a1a2e;flex-shrink:0}
+  .fav-mini-name{font-size:12px;color:#ddd;flex:1}
+
+  /* ADMIN FAVORITES PANEL */
+  .admin-fav-tabs{display:flex;gap:6px;margin-bottom:1rem}
+  .admin-fav-tab{flex:1;padding:8px;border-radius:8px;border:1px solid #2a2a3e;background:#12122a;color:#aaa;font-size:12px;cursor:pointer;transition:.15s}
+  .admin-fav-tab.active{background:#6a3aa0;border-color:#6a3aa0;color:#fff}
+  .admin-fav-group{margin-bottom:1rem;border:1px solid #2a2a3e;border-radius:9px;padding:.7rem}
+  .admin-fav-group-title{font-size:12px;font-weight:600;color:#fff;margin-bottom:6px;display:flex;align-items:center;gap:6px}
+  .admin-fav-count{font-size:10px;background:#2a2a4e;color:#a0a0ff;padding:1px 7px;border-radius:10px}
+  .admin-fav-sub{font-size:11px;color:#888;padding:3px 0 3px 8px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="header">
+    <div class="logo">LUCKY <span>COLLECTIBLES</span></div>
+    <div class="tagline" id="tagline">Premium Trading Card Game</div>
+    <div class="lang-bar">
+      <button class="lang-btn active" onclick="setLang('en',this)">🇺🇸 EN</button>
+      <button class="lang-btn" onclick="setLang('lo',this)">🇱🇦 ລາວ</button>
+      <button class="lang-btn" onclick="setLang('th',this)">🇹🇭 ไทย</button>
+    </div>
+  </div>
+  <div class="top-bar">
+    <div class="search-wrap">
+      <input class="search-input" id="search" placeholder="Search cards..." oninput="renderCards()">
+      <span class="search-icon">🔍</span>
+    </div>
+    <button class="filter-btn active" onclick="setFilter('all',this)">All</button>
+    <button class="filter-btn" onclick="setFilter('pokemon',this)">Pokémon</button>
+    <button class="filter-btn" onclick="setFilter('onepiece',this)">One Piece</button>
+    <button class="filter-btn" onclick="setFilter('yugioh',this)">Yu-Gi-Oh</button>
+    <button class="filter-btn" onclick="setFilter('other',this)">Other</button>
+    <button class="grade-filter-btn" id="grade-filter-btn" onclick="openGradePopup()">🏆 <span id="grade-filter-label">Grade</span></button>
+    <button class="view-toggle-btn" id="view-toggle-btn" onclick="toggleGridView()">⊞ <span id="view-toggle-label">Compact</span></button>
+    <button class="add-btn hidden" id="add-card-btn" onclick="openAddModal()">＋ <span id="add-label">Add Card</span></button>
+    <button class="lock-btn hidden" id="admin-fav-btn" onclick="openAdminFavModal()">❤️ <span id="admin-fav-label">Favorites</span></button>
+    <button class="account-btn" id="account-btn" onclick="openAccountModal()">
+      <span id="account-icon">👤</span><span id="account-label">Account</span>
+    </button>
+    <button class="lock-btn" id="lock-btn" onclick="toggleAdmin()">
+      <span id="lock-icon">🔒</span><span id="lock-label">Admin</span>
+    </button>
+  </div>
+  <div class="section-title" id="section-title">Cards</div>
+  <div class="grid" id="card-grid"><div class="loading">⏳ Loading cards...</div></div>
+  <div class="footer" id="footer">Contact via Facebook to purchase · Prices in THB & KIP</div>
+</div>
+
+<!-- GRADE FILTER POPUP -->
+<div class="grade-popup-overlay hidden" id="grade-popup-overlay">
+  <div class="grade-popup">
+    <div class="grade-popup-title" id="grade-popup-title">Filter by Grade</div>
+    <div class="grade-grid" id="grade-grid"></div>
+    <button class="grade-clear-btn" id="grade-clear-btn" onclick="clearGradeFilter()">Show All Grades</button>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox hidden" id="lightbox">
+  <button class="lb-close" onclick="closeLightbox()">✕</button>
+  <div class="lb-img-wrap" id="lb-img-wrap">
+    <img class="lb-img" id="lb-img" src="" alt="">
+  </div>
+  <div class="lb-controls">
+    <div class="lb-nav">
+      <button class="lb-nav-btn" onclick="lbPrev()">‹</button>
+      <button class="lb-nav-btn" onclick="lbNext()">›</button>
+    </div>
+    <span class="lb-counter" id="lb-counter"></span>
+    <button class="lb-btn" onclick="lbZoomOut()">－</button>
+    <button class="lb-btn" onclick="lbZoomIn()">＋</button>
+    <button class="lb-btn" onclick="lbReset()">↺</button>
+  </div>
+</div>
+
+<!-- PASSWORD -->
+<div class="overlay hidden" id="pw-overlay">
+  <div class="modal">
+    <div class="modal-title">🔒 Admin Login</div>
+    <div class="form-group">
+      <label class="form-label">Password</label>
+      <input class="form-input" id="pw-input" type="password" placeholder="Enter password..." onkeydown="if(event.key==='Enter')checkPassword()">
+    </div>
+    <div class="pw-hint" id="pw-hint"></div>
+    <div class="modal-btns">
+      <button class="btn-save" onclick="checkPassword()">Login</button>
+      <button class="btn-cancel" onclick="closePwModal()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- ADD/EDIT -->
+<div class="overlay hidden" id="form-overlay">
+  <div class="modal">
+    <div class="modal-title" id="form-title">Add Card</div>
+    <div class="form-group">
+      <label class="form-label" id="lbl-image">Card Images (up to 10)</label>
+      <div class="img-grid" id="img-grid"></div>
+      <div class="img-count-label" id="img-count-label">0 / 10 images</div>
+    </div>
+    <div class="form-group">
+      <label class="form-label" id="lbl-name">Card Name</label>
+      <input class="form-input" id="f-name" placeholder="e.g. Charizard ex">
+    </div>
+    <div class="form-group">
+      <label class="form-label" id="lbl-series">Series</label>
+      <select class="form-select" id="f-series">
+        <option value="pokemon">Pokémon</option>
+        <option value="onepiece">One Piece</option>
+        <option value="yugioh">Yu-Gi-Oh</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label class="form-label" id="lbl-grade">Grading</label>
+      <select class="form-select" id="f-grade">
+        <option value="">No Grade</option>
+        <option value="Raw">Raw</option>
+        <option value="PSA10">PSA 10</option>
+        <option value="PSA9">PSA 9</option>
+        <option value="BGS10">BGS 10</option>
+        <option value="BGS9.5">BGS 9.5</option>
+        <option value="CGC10P">CGC 10 Pristine</option>
+        <option value="CGC10">CGC 10</option>
+        <option value="TAG10">TAG 10</option>
+        <option value="TAG9">TAG 9</option>
+        <option value="PCG10">PCG 10</option>
+        <option value="PCG9">PCG 9</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label class="form-label" id="lbl-set">Set / Collection</label>
+      <input class="form-input" id="f-set" placeholder="e.g. Scarlet & Violet">
+    </div>
+    <div class="form-group">
+      <label class="form-label" id="lbl-date">Date</label>
+      <input class="form-input" id="f-date" type="date">
+    </div>
+    <div class="form-group">
+      <label class="form-label" id="lbl-price">Price</label>
+      <div class="price-row">
+        <div>
+          <label class="form-label" style="font-size:10px">🇹🇭 THB (฿)</label>
+          <input class="form-input" id="f-thb" type="number" placeholder="0" min="0">
+        </div>
+        <div>
+          <label class="form-label" style="font-size:10px">🇱🇦 KIP (₭)</label>
+          <input class="form-input" id="f-kip" type="number" placeholder="0" min="0">
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label" id="lbl-status">Status</label>
+      <select class="form-select" id="f-status">
+        <option value="available">Available</option>
+        <option value="sold">Sold</option>
+      </select>
+    </div>
+    <div class="modal-btns">
+      <button class="btn-save" id="save-btn" onclick="saveCard()">Save</button>
+      <button class="btn-cancel" id="cancel-btn" onclick="closeFormModal()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div class="overlay hidden" id="contact-overlay">
+  <div class="modal">
+    <div class="modal-title" id="contact-card-name"></div>
+    <div class="contact-sub" id="contact-sub">Contact us to purchase this card:</div>
+    <div class="fb-links">
+      <a class="fb-link-btn" href="https://www.facebook.com/share/1bYtBvcZzX/" target="_blank">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        Facebook Page Lucky Collectibles
+      </a>
+    </div>
+    <button class="btn-close-modal" id="close-contact-btn" onclick="closeContactModal()">Close</button>
+  </div>
+</div>
+
+<!-- ACCOUNT MODAL -->
+<div class="overlay hidden" id="account-overlay">
+  <div class="modal">
+    <div id="account-logged-out">
+      <div class="auth-tabs">
+        <button class="auth-tab active" id="tab-login" onclick="setAuthTab('login')">Login</button>
+        <button class="auth-tab" id="tab-signup" onclick="setAuthTab('signup')">Sign Up</button>
+      </div>
+      <div class="form-group">
+        <label class="form-label" id="auth-email-label">Username</label>
+        <input class="form-input" id="auth-email" type="text" placeholder="Choose a username" autocomplete="off">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Password</label>
+        <input class="form-input" id="auth-password" type="password" placeholder="Password" onkeydown="if(event.key==='Enter')submitAuth()">
+      </div>
+      <div class="pw-hint" id="auth-hint"></div>
+      <div class="modal-btns">
+        <button class="btn-save" id="auth-submit-btn" onclick="submitAuth()">Login</button>
+        <button class="btn-cancel" onclick="closeAccountModal()">Cancel</button>
+      </div>
+    </div>
+    <div id="account-logged-in" class="hidden">
+      <div class="account-info">
+        <div style="font-size:32px;margin-bottom:6px">👤</div>
+        <div class="account-email" id="account-email-display"></div>
+      </div>
+      <div class="section-title" id="my-favorites-title" style="margin-top:1rem">My Favorites</div>
+      <div class="fav-list-mini" id="my-favorites-list"></div>
+      <div class="modal-btns">
+        <button class="btn-cancel" onclick="logoutUser()" id="logout-btn">Log Out</button>
+        <button class="btn-cancel" onclick="closeAccountModal()" id="account-close-btn">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ADMIN FAVORITES MODAL -->
+<div class="overlay hidden" id="admin-fav-overlay">
+  <div class="modal">
+    <div class="modal-title">❤️ Favorites Overview</div>
+    <div class="admin-fav-tabs">
+      <button class="admin-fav-tab active" id="fav-tab-card" onclick="setAdminFavView('card')">By Card</button>
+      <button class="admin-fav-tab" id="fav-tab-user" onclick="setAdminFavView('user')">By User</button>
+    </div>
+    <div id="admin-fav-content" style="max-height:50vh;overflow-y:auto"></div>
+    <button class="btn-close-modal" onclick="closeAdminFavModal()">Close</button>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<button class="scroll-top-btn" id="scroll-top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+// FAST PATH: fetch cards immediately via plain fetch, don't wait for the Supabase SDK module to load.
+// The main module below picks up window.__earlyCards once it's ready.
+(function(){
+  const SUPABASE_URL='https://pbvxamtepdwdiodkvgxa.supabase.co';
+  const SUPABASE_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBidnhhbXRlcGR3ZGlvZGt2Z3hhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE4NDE2MzUsImV4cCI6MjA5NzQxNzYzNX0.xmkcgATtk4FWfzPILxNo_Qfp8zQUiCIG8BPKyWfWtCs';
+  const API=`${SUPABASE_URL}/rest/v1/cards`;
+  const HEADS={'Content-Type':'application/json','apikey':SUPABASE_KEY,'Authorization':'Bearer '+SUPABASE_KEY};
+  window.__earlyCardsPromise=fetch(API+'?order=sort_order.asc,id.asc',{headers:HEADS})
+    .then(r=>r.ok?r.json():[])
+    .catch(()=>null);
+})();
+</script>
+
+<script type="module">
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+
+const SUPABASE_URL='https://pbvxamtepdwdiodkvgxa.supabase.co';
+const SUPABASE_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBidnhhbXRlcGR3ZGlvZGt2Z3hhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE4NDE2MzUsImV4cCI6MjA5NzQxNzYzNX0.xmkcgATtk4FWfzPILxNo_Qfp8zQUiCIG8BPKyWfWtCs';
+const sb=createClient(SUPABASE_URL,SUPABASE_KEY);
+
+const API=`${SUPABASE_URL}/rest/v1/cards`;
+const HEADS={'Content-Type':'application/json','apikey':SUPABASE_KEY,'Authorization':'Bearer '+SUPABASE_KEY};
+
+const PASS='popsmokeluffy';
+const MAX_IMAGES=10;
+const GRADES=[
+  {v:'Raw',l:'Raw'},
+  {v:'PSA10',l:'PSA 10'},{v:'PSA9',l:'PSA 9'},
+  {v:'BGS10',l:'BGS 10'},{v:'BGS9.5',l:'BGS 9.5'},
+  {v:'CGC10P',l:'CGC 10 Pristine'},{v:'CGC10',l:'CGC 10'},
+  {v:'TAG10',l:'TAG 10'},{v:'TAG9',l:'TAG 9'},
+  {v:'PCG10',l:'PCG 10'},{v:'PCG9',l:'PCG 9'},
+  {v:'Other',l:'Other'}
+];
+
+const T={
+  en:{tagline:'Premium Trading Card Game',section:'Cards',addLabel:'Add Card',footer:'Contact via Facebook to purchase · Prices in THB & KIP',formTitle:'Add Card',editTitle:'Edit Card',save:'Save',cancel:'Cancel',contact:'Contact to Buy',close:'Close',contactSub:'Contact us to purchase this card:',lName:'Card Name',lSeries:'Series',lSet:'Set / Collection',lDate:'Date',lPrice:'Price',lStatus:'Status',lImage:'Card Images (up to 10)',lGrade:'Grading',available:'Available',sold:'Sold',search:'Search cards...',empty:'No cards yet.',adminOn:'Admin ✓',adminOff:'Admin',wrongPw:'Wrong password.',saved:'Saved! ✓',deleted:'Deleted!',imgCount:'images',gradeLabel:'Grade',gradePopupTitle:'Filter by Grade',showAllGrades:'Show All Grades',accountLabel:'Account',loginBtn:'Login',signupBtn:'Sign Up',myFavorites:'My Favorites',noFavorites:'No favorites yet.',logoutBtn:'Log Out',loginSuccess:'Logged in! ✓',signupSuccess:'Account created! ✓',authError:'Something went wrong.',favAdded:'Added to favorites ❤️',favRemoved:'Removed from favorites',loginRequired:'Please login to save favorites',favoritesOverview:'Favorites Overview',byCard:'By Card',byUser:'By User',noFavoritesYet:'No favorites yet.',usernameLabel:'Username',compactLabel:'Compact'},
+  lo:{tagline:'ເກມການ໌ດສະສົມລະດັບສູງ',section:'ການ໌ດ',addLabel:'ເພີ່ມການ໌ດ',footer:'ຕິດຕໍ່ຜ່ານ Facebook ເພື່ອຊື້ · ລາຄາເປັນ THB & KIP',formTitle:'ເພີ່ມການ໌ດ',editTitle:'ແກ້ໄຂການ໌ດ',save:'ບັນທຶກ',cancel:'ຍົກເລີກ',contact:'ຕິດຕໍ່ຊື້',close:'ປິດ',contactSub:'ຕິດຕໍ່ເພື່ອຊື້ການ໌ດນີ້:',lName:'ຊື່ການ໌ດ',lSeries:'ຊີຣີ',lSet:'ຊຸດ',lDate:'ວັນທີ',lPrice:'ລາຄາ',lStatus:'ສະຖານະ',lImage:'ຮູບການ໌ດ (ສູງສຸດ 10)',lGrade:'ການຈັດອັນດັບ',available:'ມີຂາຍ',sold:'ຂາຍແລ້ວ',search:'ຄົ້ນຫາ...',empty:'ບໍ່ມີການ໌ດ.',adminOn:'Admin ✓',adminOff:'Admin',wrongPw:'ລະຫັດຜ່ານຜິດ.',saved:'ບັນທຶກແລ້ວ! ✓',deleted:'ລຶບແລ້ວ!',imgCount:'ຮູບ',gradeLabel:'ອັນດັບ',gradePopupTitle:'ກັ່ນຕອງຕາມອັນດັບ',showAllGrades:'ສະແດງທຸກອັນດັບ',accountLabel:'ບັນຊີ',loginBtn:'ເຂົ້າສູ່ລະບົບ',signupBtn:'ສ້າງບັນຊີ',myFavorites:'ລາຍການທີ່ມັກ',noFavorites:'ຍັງບໍ່ມີລາຍການທີ່ມັກ.',logoutBtn:'ອອກຈາກລະບົບ',loginSuccess:'ເຂົ້າສູ່ລະບົບແລ້ວ! ✓',signupSuccess:'ສ້າງບັນຊີແລ້ວ! ✓',authError:'ມີຂໍ້ຜິດພາດ.',favAdded:'ເພີ່ມໃນລາຍການທີ່ມັກ ❤️',favRemoved:'ລຶບອອກຈາກລາຍການທີ່ມັກ',loginRequired:'ກະລຸນາເຂົ້າສູ່ລະບົບເພື່ອບັນທຶກ',favoritesOverview:'ພາບລວມລາຍການທີ່ມັກ',byCard:'ຕາມການ໌ດ',byUser:'ຕາມຜູ້ໃຊ້',noFavoritesYet:'ຍັງບໍ່ມີລາຍການທີ່ມັກ.',usernameLabel:'ຊື່ຜູ້ໃຊ້',compactLabel:'ຫຍໍ້'},
+  th:{tagline:'เกมการ์ดสะสมระดับพรีเมียม',section:'การ์ด',addLabel:'เพิ่มการ์ด',footer:'ติดต่อผ่าน Facebook เพื่อซื้อ · ราคาเป็น THB & KIP',formTitle:'เพิ่มการ์ด',editTitle:'แก้ไขการ์ด',save:'บันทึก',cancel:'ยกเลิก',contact:'ติดต่อซื้อ',close:'ปิด',contactSub:'ติดต่อเราเพื่อซื้อการ์ดใบนี้:',lName:'ชื่อการ์ด',lSeries:'ซีรีส์',lSet:'ชุด',lDate:'วันที่',lPrice:'ราคา',lStatus:'สถานะ',lImage:'รูปการ์ด (สูงสุด 10)',lGrade:'การจัดเกรด',available:'มีจำหน่าย',sold:'ขายแล้ว',search:'ค้นหา...',empty:'ยังไม่มีการ์ด',adminOn:'Admin ✓',adminOff:'Admin',wrongPw:'รหัสผ่านไม่ถูกต้อง',saved:'บันทึกแล้ว! ✓',deleted:'ลบแล้ว!',imgCount:'รูป',gradeLabel:'เกรด',gradePopupTitle:'กรองตามเกรด',showAllGrades:'แสดงทุกเกรด',accountLabel:'บัญชี',loginBtn:'เข้าสู่ระบบ',signupBtn:'สมัครสมาชิก',myFavorites:'รายการที่ชอบ',noFavorites:'ยังไม่มีรายการที่ชอบ',logoutBtn:'ออกจากระบบ',loginSuccess:'เข้าสู่ระบบแล้ว! ✓',signupSuccess:'สร้างบัญชีแล้ว! ✓',authError:'เกิดข้อผิดพลาด',favAdded:'เพิ่มในรายการที่ชอบ ❤️',favRemoved:'ลบออกจากรายการที่ชอบ',loginRequired:'กรุณาเข้าสู่ระบบเพื่อบันทึก',favoritesOverview:'ภาพรวมรายการที่ชอบ',byCard:'ตามการ์ด',byUser:'ตามผู้ใช้',noFavoritesYet:'ยังไม่มีรายการที่ชอบ',usernameLabel:'ชื่อผู้ใช้',compactLabel:'ย่อ'}
+};
+
+let lang='en',filter='all',gradeFilter=null,isAdmin=false,editId=null,cards=[];
+let imgList=[];
+let lbImages=[],lbIndex=0,lbScale=1,lbDrag={active:false,startX:0,startY:0,curTx:0,curTy:0};
+window._slideIdx={};
+let currentUser=null;
+let favoriteIds=new Set();
+let authMode='login';
+let adminFavView='card';
+let compactView=false;
+
+function toggleGridView(){
+  compactView=!compactView;
+  const grid=document.getElementById('card-grid');
+  const btn=document.getElementById('view-toggle-btn');
+  if(compactView){
+    grid.classList.add('compact');
+    btn.classList.add('active');
+  } else {
+    grid.classList.remove('compact');
+    btn.classList.remove('active');
+  }
+}
+
+function t(k){return T[lang][k]||k}
+function gradeLabel(v){if(!v)return t('gradeLabel');const g=GRADES.find(x=>x.v===v);return g?g.l:v;}
+function fmt(n){if(!n&&n!==0)return'—';return Number(n).toLocaleString()}
+function showToast(msg,isError=false){const el=document.getElementById('toast');el.textContent=msg;el.className='toast'+(isError?' error':'')+' show';setTimeout(()=>el.classList.remove('show'),2500);}
+
+async function dbFetch(){
+  try{
+    // Use the early fetch kicked off before the module loaded, if available
+    if(window.__earlyCardsPromise){
+      const early=await window.__earlyCardsPromise;
+      window.__earlyCardsPromise=null;
+      if(early){cards=early;renderCards();return;}
+    }
+    const r=await fetch(API+'?order=sort_order.asc,id.asc',{headers:HEADS});
+    if(!r.ok)throw new Error('fetch failed');
+    cards=await r.json();
+    renderCards();
+  }catch(e){showToast('Load error: '+e.message,true);}
+}
+async function dbInsert(data){
+  const r=await fetch(API,{method:'POST',headers:{...HEADS,'Prefer':'return=representation'},body:JSON.stringify(data)});
+  if(!r.ok){const e=await r.text();throw new Error(e);}
+  return await r.json();
+}
+async function dbUpdate(id,data){
+  const r=await fetch(API+'?id=eq.'+id,{method:'PATCH',headers:{...HEADS,'Prefer':'return=representation'},body:JSON.stringify(data)});
+  if(!r.ok){const e=await r.text();throw new Error(e);}
+  return await r.json();
+}
+async function dbDelete(id){
+  const r=await fetch(API+'?id=eq.'+id,{method:'DELETE',headers:HEADS});
+  if(!r.ok){const e=await r.text();throw new Error(e);}
+}
+
+// ===== AUTH =====
+function setAuthTab(mode){
+  authMode=mode;
+  document.getElementById('tab-login').classList.toggle('active',mode==='login');
+  document.getElementById('tab-signup').classList.toggle('active',mode==='signup');
+  document.getElementById('auth-submit-btn').textContent=mode==='login'?t('loginBtn'):t('signupBtn');
+  document.getElementById('auth-email-label').textContent=t('usernameLabel');
+  document.getElementById('auth-hint').textContent='';
+}
+
+async function submitAuth(){
+  const usernameRaw=document.getElementById('auth-email').value.trim();
+  const password=document.getElementById('auth-password').value;
+  const hint=document.getElementById('auth-hint');
+  if(!usernameRaw||!password){hint.textContent='Please fill in both fields.';return;}
+  const username=usernameRaw.toLowerCase().replace(/[^a-z0-9_.-]/g,'');
+  if(!username){hint.textContent='Please use letters or numbers for username.';return;}
+  const email=username+'@luckycollectibles.app';
+  hint.textContent='';
+  try{
+    if(authMode==='signup'){
+      const {data,error}=await sb.auth.signUp({email,password});
+      if(error)throw error;
+      showToast(t('signupSuccess'));
+    } else {
+      const {data,error}=await sb.auth.signInWithPassword({email,password});
+      if(error)throw error;
+      showToast(t('loginSuccess'));
+    }
+    document.getElementById('auth-email').value='';
+    document.getElementById('auth-password').value='';
+    await refreshAuthState();
+    closeAccountModal();
+  }catch(e){
+    hint.textContent=e.message||t('authError');
+  }
+}
+
+async function logoutUser(){
+  await sb.auth.signOut();
+  currentUser=null;
+  favoriteIds=new Set();
+  updateAccountUI();
+  closeAccountModal();
+  renderCards();
+}
+
+async function refreshAuthState(){
+  const {data}=await sb.auth.getSession();
+  currentUser=data?.session?.user||null;
+  if(currentUser){
+    await loadMyFavorites();
+  } else {
+    favoriteIds=new Set();
+  }
+  updateAccountUI();
+  renderCards();
+}
+
+function updateAccountUI(){
+  const btn=document.getElementById('account-btn');
+  const icon=document.getElementById('account-icon');
+  const label=document.getElementById('account-label');
+  if(currentUser){
+    btn.classList.add('logged-in');
+    icon.textContent='👤';
+    label.textContent=currentUser.email.split('@')[0];
+  } else {
+    btn.classList.remove('logged-in');
+    icon.textContent='👤';
+    label.textContent=t('accountLabel');
+  }
+}
+
+function openAccountModal(){
+  document.getElementById('account-overlay').classList.remove('hidden');
+  if(currentUser){
+    document.getElementById('account-logged-out').classList.add('hidden');
+    document.getElementById('account-logged-in').classList.remove('hidden');
+    document.getElementById('account-email-display').textContent=currentUser.email.split('@')[0];
+    document.getElementById('my-favorites-title').textContent=t('myFavorites');
+    document.getElementById('logout-btn').textContent=t('logoutBtn');
+    document.getElementById('account-close-btn').textContent=t('close');
+    renderMyFavoritesList();
+  } else {
+    document.getElementById('account-logged-out').classList.remove('hidden');
+    document.getElementById('account-logged-in').classList.add('hidden');
+    document.getElementById('auth-hint').textContent='';
+    setAuthTab('login');
+  }
+}
+function closeAccountModal(){document.getElementById('account-overlay').classList.add('hidden');}
+document.getElementById('account-overlay').addEventListener('click',e=>{if(e.target===e.currentTarget)closeAccountModal();});
+
+function renderMyFavoritesList(){
+  const list=document.getElementById('my-favorites-list');
+  const favCards=cards.filter(c=>favoriteIds.has(c.id));
+  if(!favCards.length){list.innerHTML=`<div style="text-align:center;color:#555;font-size:12px;padding:1rem">${t('noFavorites')}</div>`;return;}
+  list.innerHTML=favCards.map(c=>{
+    const img=getCardImages(c)[0];
+    return`<div class="fav-mini-item" onclick="goToCard(${c.id})">
+      ${img?`<img class="fav-mini-img" src="${img}">`:`<div class="fav-mini-img" style="display:flex;align-items:center;justify-content:center">🃏</div>`}
+      <div class="fav-mini-name">${c.name||'—'}</div>
+    </div>`;
+  }).join('');
+}
+
+function goToCard(cardId){
+  closeAccountModal();
+  // reset filters so the card is guaranteed to be visible
+  filter='all';
+  gradeFilter=null;
+  document.getElementById('search').value='';
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelector('.filter-btn').classList.add('active');
+  document.getElementById('grade-filter-btn').classList.remove('active');
+  document.getElementById('grade-filter-label').textContent=t('gradeLabel');
+  renderCards();
+  setTimeout(()=>{
+    const el=document.getElementById('card-'+cardId);
+    if(el){
+      el.scrollIntoView({behavior:'smooth',block:'center'});
+      el.style.transition='box-shadow .3s';
+      el.style.boxShadow='0 0 0 3px #e94560';
+      setTimeout(()=>{el.style.boxShadow='';},1800);
+    }
+  },150);
+}
+
+// ===== FAVORITES (Supabase table) =====
+async function loadMyFavorites(){
+  if(!currentUser)return;
+  try{
+    const {data,error}=await sb.from('favorites').select('card_id').eq('user_id',currentUser.id);
+    if(error)throw error;
+    favoriteIds=new Set((data||[]).map(r=>r.card_id));
+  }catch(e){/* table may not exist yet */}
+}
+
+async function toggleFavorite(cardId,e){
+  e.stopPropagation();
+  if(!currentUser){
+    showToast(t('loginRequired'),true);
+    openAccountModal();
+    return;
+  }
+  const isFav=favoriteIds.has(cardId);
+  try{
+    if(isFav){
+      const {error}=await sb.from('favorites').delete().eq('user_id',currentUser.id).eq('card_id',cardId);
+      if(error)throw error;
+      favoriteIds.delete(cardId);
+      showToast(t('favRemoved'));
+    } else {
+      const {error}=await sb.from('favorites').insert({user_id:currentUser.id,card_id:cardId});
+      if(error)throw error;
+      favoriteIds.add(cardId);
+      showToast(t('favAdded'));
+    }
+    renderCards();
+  }catch(e){
+    showToast('Error: '+e.message,true);
+  }
+}
+
+// ===== ADMIN FAVORITES VIEW =====
+function setAdminFavView(view){
+  adminFavView=view;
+  document.getElementById('fav-tab-card').classList.toggle('active',view==='card');
+  document.getElementById('fav-tab-user').classList.toggle('active',view==='user');
+  renderAdminFavContent();
+}
+
+async function openAdminFavModal(){
+  document.getElementById('admin-fav-overlay').classList.remove('hidden');
+  document.getElementById('fav-tab-card').textContent=t('byCard');
+  document.getElementById('fav-tab-user').textContent=t('byUser');
+  const content=document.getElementById('admin-fav-content');
+  content.innerHTML='<div class="loading">⏳ Loading...</div>';
+  await loadAllFavoritesForAdmin();
+  renderAdminFavContent();
+}
+function closeAdminFavModal(){document.getElementById('admin-fav-overlay').classList.add('hidden');}
+document.getElementById('admin-fav-overlay').addEventListener('click',e=>{if(e.target===e.currentTarget)closeAdminFavModal();});
+
+let allFavoritesData=[];
+async function loadAllFavoritesForAdmin(){
+  try{
+    const {data,error}=await sb.from('favorites').select('card_id,user_id,created_at');
+    if(error)throw error;
+    allFavoritesData=data||[];
+  }catch(e){
+    allFavoritesData=[];
+    showToast('Could not load favorites: '+e.message,true);
+  }
+}
+
+function renderAdminFavContent(){
+  const content=document.getElementById('admin-fav-content');
+  if(!allFavoritesData.length){
+    content.innerHTML=`<div class="empty">${t('noFavoritesYet')}</div>`;
+    return;
+  }
+  if(adminFavView==='card'){
+    const byCard={};
+    allFavoritesData.forEach(f=>{
+      if(!byCard[f.card_id])byCard[f.card_id]=[];
+      byCard[f.card_id].push(f.user_id);
+    });
+    content.innerHTML=Object.entries(byCard).map(([cardId,userIds])=>{
+      const c=cards.find(x=>x.id===Number(cardId));
+      const cardName=c?c.name:`Card #${cardId}`;
+      return`<div class="admin-fav-group">
+        <div class="admin-fav-group-title">🃏 ${cardName} <span class="admin-fav-count">${userIds.length}</span></div>
+        ${userIds.map(uid=>`<div class="admin-fav-sub">👤 ${uid.slice(0,8)}...</div>`).join('')}
+      </div>`;
+    }).join('');
+  } else {
+    const byUser={};
+    allFavoritesData.forEach(f=>{
+      if(!byUser[f.user_id])byUser[f.user_id]=[];
+      byUser[f.user_id].push(f.card_id);
+    });
+    content.innerHTML=Object.entries(byUser).map(([userId,cardIds])=>{
+      return`<div class="admin-fav-group">
+        <div class="admin-fav-group-title">👤 ${userId.slice(0,12)}... <span class="admin-fav-count">${cardIds.length}</span></div>
+        ${cardIds.map(cid=>{
+          const c=cards.find(x=>x.id===cid);
+          return `<div class="admin-fav-sub">🃏 ${c?c.name:'Card #'+cid}</div>`;
+        }).join('')}
+      </div>`;
+    }).join('');
+  }
+}
+
+function resizeImage(file,cb){
+  const reader=new FileReader();
+  reader.onload=ev=>{
+    const img=new Image();
+    img.onload=()=>{
+      const canvas=document.createElement('canvas');
+      const MAX=900;let w=img.width,h=img.height;
+      if(w>MAX){h=Math.round(h*MAX/w);w=MAX;}
+      if(h>MAX){w=Math.round(w*MAX/h);h=MAX;}
+      canvas.width=w;canvas.height=h;
+      canvas.getContext('2d').drawImage(img,0,0,w,h);
+      cb(canvas.toDataURL('image/jpeg',0.8));
+    };img.src=ev.target.result;
+  };reader.readAsDataURL(file);
+}
+
+function renderImgGrid(){
+  const grid=document.getElementById('img-grid');
+  let html='';
+  imgList.forEach((src,i)=>{
+    html+=`<div class="img-slot"><img src="${src}"><button class="img-clear" onclick="removeImgSlot(${i})">✕</button></div>`;
+  });
+  if(imgList.length<MAX_IMAGES){
+    html+=`<div class="img-add-slot"><input type="file" accept="image/*" onchange="handleMultiImageUpload(event)"><div class="img-add-icon">＋</div></div>`;
+  }
+  grid.innerHTML=html;
+  document.getElementById('img-count-label').textContent=`${imgList.length} / ${MAX_IMAGES} ${t('imgCount')}`;
+}
+
+function handleMultiImageUpload(e){
+  const file=e.target.files[0];if(!file)return;
+  if(imgList.length>=MAX_IMAGES)return;
+  resizeImage(file,(data)=>{
+    imgList.push(data);
+    renderImgGrid();
+  });
+}
+function removeImgSlot(i){imgList.splice(i,1);renderImgGrid();}
+
+// Grade filter popup
+function openGradePopup(){
+  document.getElementById('grade-popup-title').textContent=t('gradePopupTitle');
+  document.getElementById('grade-clear-btn').textContent=t('showAllGrades');
+  const grid=document.getElementById('grade-grid');
+  grid.innerHTML=GRADES.map(g=>`<button class="grade-option ${gradeFilter===g.v?'selected':''}" onclick="selectGradeFilter('${g.v}')">${g.l}</button>`).join('');
+  document.getElementById('grade-popup-overlay').classList.remove('hidden');
+}
+function closeGradePopup(){document.getElementById('grade-popup-overlay').classList.add('hidden');}
+function selectGradeFilter(v){
+  gradeFilter=v;
+  closeGradePopup();
+  document.getElementById('grade-filter-btn').classList.add('active');
+  document.getElementById('grade-filter-label').textContent=gradeLabel(v);
+  renderCards();
+}
+function clearGradeFilter(){
+  gradeFilter=null;
+  closeGradePopup();
+  document.getElementById('grade-filter-btn').classList.remove('active');
+  document.getElementById('grade-filter-label').textContent=t('gradeLabel');
+  renderCards();
+}
+document.getElementById('grade-popup-overlay').addEventListener('click',e=>{if(e.target===e.currentTarget)closeGradePopup();});
+
+function openLightbox(images,index){
+  lbImages=images.filter(Boolean);if(!lbImages.length)return;
+  lbIndex=Math.min(index,lbImages.length-1);lbScale=1;lbDrag.curTx=0;lbDrag.curTy=0;
+  document.getElementById('lightbox').classList.remove('hidden');
+  document.body.style.overflow='hidden';updateLightbox();
+}
+function updateLightbox(){
+  const img=document.getElementById('lb-img');
+  img.src=lbImages[lbIndex];
+  img.style.transform=`scale(${lbScale}) translate(${lbDrag.curTx/lbScale}px,${lbDrag.curTy/lbScale}px)`;
+  document.getElementById('lb-counter').textContent=lbImages.length>1?`${lbIndex+1} / ${lbImages.length}`:'';
+}
+function closeLightbox(){document.getElementById('lightbox').classList.add('hidden');document.body.style.overflow='';lbScale=1;lbDrag.curTx=0;lbDrag.curTy=0;}
+function lbZoomIn(){lbScale=Math.min(lbScale+0.5,5);updateLightbox();}
+function lbZoomOut(){lbScale=Math.max(lbScale-0.5,0.5);if(lbScale===1){lbDrag.curTx=0;lbDrag.curTy=0;}updateLightbox();}
+function lbReset(){lbScale=1;lbDrag.curTx=0;lbDrag.curTy=0;updateLightbox();}
+function lbPrev(){lbIndex=(lbIndex-1+lbImages.length)%lbImages.length;lbScale=1;lbDrag.curTx=0;lbDrag.curTy=0;updateLightbox();}
+function lbNext(){lbIndex=(lbIndex+1)%lbImages.length;lbScale=1;lbDrag.curTx=0;lbDrag.curTy=0;updateLightbox();}
+
+document.getElementById('lb-img-wrap').addEventListener('wheel',e=>{e.preventDefault();if(e.deltaY<0)lbZoomIn();else lbZoomOut();},{passive:false});
+const wrap=document.getElementById('lb-img-wrap');
+wrap.addEventListener('mousedown',e=>{if(lbScale<=1)return;lbDrag.active=true;lbDrag.startX=e.clientX-lbDrag.curTx;lbDrag.startY=e.clientY-lbDrag.curTy;wrap.classList.add('grabbing');});
+window.addEventListener('mousemove',e=>{if(!lbDrag.active)return;lbDrag.curTx=e.clientX-lbDrag.startX;lbDrag.curTy=e.clientY-lbDrag.startY;updateLightbox();});
+window.addEventListener('mouseup',()=>{lbDrag.active=false;wrap.classList.remove('grabbing');});
+let lastDist=0;
+wrap.addEventListener('touchstart',e=>{if(e.touches.length===2)lastDist=Math.hypot(e.touches[0].clientX-e.touches[1].clientX,e.touches[0].clientY-e.touches[1].clientY);},{passive:true});
+wrap.addEventListener('touchmove',e=>{if(e.touches.length===2){const d=Math.hypot(e.touches[0].clientX-e.touches[1].clientX,e.touches[0].clientY-e.touches[1].clientY);lbScale=Math.min(Math.max(lbScale*(d/lastDist),0.5),5);lastDist=d;updateLightbox();}},{passive:true});
+document.getElementById('lightbox').addEventListener('click',e=>{if(e.target===document.getElementById('lightbox'))closeLightbox();});
+window.addEventListener('keydown',e=>{if(document.getElementById('lightbox').classList.contains('hidden'))return;if(e.key==='Escape')closeLightbox();if(e.key==='ArrowLeft')lbPrev();if(e.key==='ArrowRight')lbNext();if(e.key==='+')lbZoomIn();if(e.key==='-')lbZoomOut();});
+
+function toggleAdmin(){
+  if(isAdmin){isAdmin=false;updateAdminUI();}
+  else{document.getElementById('pw-input').value='';document.getElementById('pw-hint').textContent='';document.getElementById('pw-overlay').classList.remove('hidden');setTimeout(()=>document.getElementById('pw-input').focus(),100);}
+}
+function checkPassword(){
+  if(document.getElementById('pw-input').value===PASS){isAdmin=true;closePwModal();updateAdminUI();}
+  else{document.getElementById('pw-hint').textContent=t('wrongPw');document.getElementById('pw-input').value='';document.getElementById('pw-input').focus();}
+}
+function closePwModal(){document.getElementById('pw-overlay').classList.add('hidden');}
+function updateAdminUI(){
+  const a=document.getElementById('add-card-btn'),lb=document.getElementById('lock-btn');
+  const fb=document.getElementById('admin-fav-btn');
+  if(isAdmin){a.classList.remove('hidden');document.getElementById('lock-icon').textContent='🔓';document.getElementById('lock-label').textContent=t('adminOn');lb.classList.add('unlocked');fb.classList.remove('hidden');}
+  else{a.classList.add('hidden');document.getElementById('lock-icon').textContent='🔒';document.getElementById('lock-label').textContent=t('adminOff');lb.classList.remove('unlocked');fb.classList.add('hidden');}
+  renderCards();
+}
+
+function setLang(l,btn){
+  lang=l;
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  applyLang();renderCards();
+}
+function applyLang(){
+  document.getElementById('tagline').textContent=t('tagline');
+  document.getElementById('section-title').textContent=t('section');
+  document.getElementById('add-label').textContent=t('addLabel');
+  document.getElementById('footer').textContent=t('footer');
+  document.getElementById('search').placeholder=t('search');
+  document.getElementById('lock-label').textContent=isAdmin?t('adminOn'):t('adminOff');
+  document.getElementById('grade-filter-label').textContent=gradeFilter?gradeLabel(gradeFilter):t('gradeLabel');
+  document.getElementById('admin-fav-label').textContent=t('myFavorites');
+  document.getElementById('view-toggle-label').textContent=t('compactLabel');
+  updateAccountUI();
+}
+function setFilter(f,btn){filter=f;document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderCards();}
+
+function seriesBadge(s){
+  const m={pokemon:'badge-pokemon',onepiece:'badge-onepiece',yugioh:'badge-yugioh',other:'badge-other'};
+  const n={pokemon:'Pokémon',onepiece:'One Piece',yugioh:'Yu-Gi-Oh',other:'Other'};
+  return`<span class="series-badge ${m[s]||'badge-other'}">${n[s]||s}</span>`;
+}
+
+async function toggleStatus(id){
+  if(!isAdmin)return;
+  const c=cards.find(x=>x.id===id);if(!c)return;
+  const ns=c.status==='available'?'sold':'available';
+  try{await dbUpdate(id,{status:ns});c.status=ns;renderCards();}
+  catch(e){showToast('Error',true);}
+}
+
+function cardSlide(id,dir,total,e){
+  e.stopPropagation();
+  if(!window._slideIdx)window._slideIdx={};
+  window._slideIdx[id]=((window._slideIdx[id]||0)+dir+total)%total;
+  const track=document.getElementById('track-'+id);
+  if(track)track.style.transform=`translateX(-${window._slideIdx[id]*100}%)`;
+  const ctr=document.getElementById('ctr-'+id);
+  if(ctr)ctr.textContent=`${window._slideIdx[id]+1} / ${total}`;
+}
+
+function getCardImages(c){
+  if(c.images&&Array.isArray(c.images)&&c.images.length)return c.images.filter(Boolean);
+  return [c.image1,c.image2].filter(Boolean);
+}
+
+function cardImgClick(id){
+  const c=cards.find(x=>x.id===id);if(!c)return;
+  const images=getCardImages(c);
+  const idx=window._slideIdx[id]||0;
+  openLightbox(images,idx);
+}
+
+function renderCards(){
+  const q=document.getElementById('search').value.toLowerCase();
+  const list=cards.filter(c=>{
+    if(filter!=='all'&&c.series!==filter)return false;
+    if(gradeFilter&&c.grade!==gradeFilter)return false;
+    if(q&&!(c.name||'').toLowerCase().includes(q)&&!(c.set_name||'').toLowerCase().includes(q))return false;
+    return true;
+  });
+  const g=document.getElementById('card-grid');
+  if(!list.length){g.innerHTML=`<div class="empty">${t('empty')}</div>`;return;}
+  g.innerHTML=list.map(c=>{
+    const images=getCardImages(c);
+    const hasMultiple=images.length>1;
+    const slides=images.length>0
+      ?images.map(img=>`<div class="slide"><img src="${img}" alt="${c.name||''}" loading="lazy"></div>`).join('')
+      :`<div class="slide"><div class="placeholder-icon">🃏</div></div>`;
+    const counter=hasMultiple?`<span class="slide-counter" id="ctr-${c.id}">1 / ${images.length}</span>`:'';
+    const arrows=hasMultiple?`<button class="slide-arrow left" onclick="cardSlide(${c.id},-1,${images.length},event)">‹</button><button class="slide-arrow right" onclick="cardSlide(${c.id},1,${images.length},event)">›</button>`:'';
+    const gradeBadge=c.grade?`<span class="grade-badge">${gradeLabel(c.grade)}</span>`:'';
+    const isFav=currentUser&&favoriteIds.has(c.id);
+    const heartBtn=`<button class="fav-heart-btn ${isFav?'favorited':''}" onclick="toggleFavorite(${c.id},event)" title="${currentUser?'Favorite':'Login to favorite'}">${isFav?'❤️':'🤍'}</button>`;
+    return`<div class="card" id="card-${c.id}">
+      <div class="card-img-wrap" onclick="cardImgClick(${c.id})">
+        <div class="slider-track" id="track-${c.id}">${slides}</div>
+        ${seriesBadge(c.series||'other')}
+        ${gradeBadge}
+        ${counter}${arrows}
+        <span class="img-zoom-hint">🔍 zoom</span>
+      </div>
+      <div class="card-body">
+        <div class="card-name" title="${c.name||''}">${c.name||'—'}</div>
+        <div class="card-meta">${c.set_name||'—'} · ${c.date||'—'}</div>
+        <div class="card-price">🇹🇭 ฿${fmt(c.thb)}</div>
+        <div class="card-price-alt">🇱🇦 ₭${fmt(c.kip)}</div>
+        <div class="status-row">
+          <button class="status-pill ${c.status==='available'?'status-available':'status-sold'} ${isAdmin?'clickable':''}"
+            onclick="${isAdmin?`toggleStatus(${c.id})`:'void(0)'}">${c.status==='available'?t('available'):t('sold')}</button>
+          ${heartBtn}
+        </div>
+        <div class="btn-row">
+          <button class="btn-fb ${c.status==='sold'?'disabled':''}" onclick="openContact(${c.id})">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            ${t('contact')}
+          </button>
+          ${isAdmin?`<button class="btn-edit" onclick="openEditModal(${c.id})">✏️</button><button class="btn-del" onclick="deleteCard(${c.id})">🗑️</button>`:''}
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+  list.forEach(c=>{if(!window._slideIdx[c.id])window._slideIdx[c.id]=0;});
+}
+
+function openAddModal(){
+  editId=null;imgList=[];renderImgGrid();
+  document.getElementById('form-title').textContent=t('formTitle');
+  ['f-name','f-set','f-thb','f-kip'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('f-series').value='pokemon';
+  document.getElementById('f-grade').value='';
+  document.getElementById('f-date').value='';
+  document.getElementById('f-status').value='available';
+  document.getElementById('lbl-image').textContent=t('lImage');
+  document.getElementById('lbl-grade').textContent=t('lGrade');
+  document.getElementById('save-btn').textContent=t('save');
+  document.getElementById('cancel-btn').textContent=t('cancel');
+  document.getElementById('form-overlay').classList.remove('hidden');
+  setTimeout(()=>document.getElementById('f-name').focus(),100);
+}
+
+function openEditModal(id){
+  const c=cards.find(x=>x.id===id);if(!c)return;
+  editId=id;
+  imgList=getCardImages(c);
+  renderImgGrid();
+  document.getElementById('form-title').textContent=t('editTitle');
+  document.getElementById('f-name').value=c.name||'';
+  document.getElementById('f-series').value=c.series||'pokemon';
+  document.getElementById('f-grade').value=c.grade||'';
+  document.getElementById('f-set').value=c.set_name||'';
+  document.getElementById('f-date').value=c.date||'';
+  document.getElementById('f-thb').value=c.thb||'';
+  document.getElementById('f-kip').value=c.kip||'';
+  document.getElementById('f-status').value=c.status||'available';
+  document.getElementById('lbl-image').textContent=t('lImage');
+  document.getElementById('lbl-grade').textContent=t('lGrade');
+  document.getElementById('save-btn').textContent=t('save');
+  document.getElementById('cancel-btn').textContent=t('cancel');
+  document.getElementById('form-overlay').classList.remove('hidden');
+}
+
+async function saveCard(){
+  const name=document.getElementById('f-name').value.trim();if(!name)return;
+  const data={
+    name,
+    series:document.getElementById('f-series').value,
+    grade:document.getElementById('f-grade').value||null,
+    set_name:document.getElementById('f-set').value.trim(),
+    date:document.getElementById('f-date').value,
+    thb:parseFloat(document.getElementById('f-thb').value)||0,
+    kip:parseFloat(document.getElementById('f-kip').value)||0,
+    status:document.getElementById('f-status').value,
+    image1:imgList[0]||null,
+    image2:imgList[1]||null,
+    sort_order:Date.now()
+  };
+  try{
+    if(editId){await dbUpdate(editId,{...data,images:imgList});}
+    else{await dbInsert({...data,images:imgList});}
+    closeFormModal();showToast(t('saved'));
+    await dbFetch();
+  }catch(e){
+    try{
+      if(editId){await dbUpdate(editId,data);}
+      else{await dbInsert(data);}
+      closeFormModal();showToast(t('saved'));
+      await dbFetch();
+    }catch(e2){
+      showToast('Save failed: '+e2.message,true);
+    }
+  }
+}
+
+async function deleteCard(id){
+  if(!confirm('Delete this card?'))return;
+  try{await dbDelete(id);showToast(t('deleted'));await dbFetch();}
+  catch(e){showToast('Delete failed',true);}
+}
+
+function closeFormModal(){document.getElementById('form-overlay').classList.add('hidden');editId=null;imgList=[];}
+
+function openContact(id){
+  const c=cards.find(x=>x.id===id);if(!c||c.status==='sold')return;
+  document.getElementById('contact-card-name').textContent=c.name;
+  document.getElementById('contact-sub').textContent=t('contactSub');
+  document.getElementById('close-contact-btn').textContent=t('close');
+  document.getElementById('contact-overlay').classList.remove('hidden');
+}
+function closeContactModal(){document.getElementById('contact-overlay').classList.add('hidden');}
+
+document.getElementById('pw-overlay').addEventListener('click',e=>{if(e.target===e.currentTarget)closePwModal();});
+document.getElementById('form-overlay').addEventListener('click',e=>{if(e.target===e.currentTarget)closeFormModal();});
+document.getElementById('contact-overlay').addEventListener('click',e=>{if(e.target===e.currentTarget)closeContactModal();});
+
+applyLang();
+dbFetch();
+refreshAuthState();
+
+window.addEventListener('scroll',()=>{
+  const btn=document.getElementById('scroll-top-btn');
+  if(window.scrollY>300)btn.classList.add('show');
+  else btn.classList.remove('show');
+});
+
+// Expose functions for inline onclick handlers (module scope requires this)
+Object.assign(window,{
+  setLang,setFilter,openGradePopup,clearGradeFilter,selectGradeFilter,
+  toggleAdmin,checkPassword,closePwModal,openAddModal,openEditModal,saveCard,deleteCard,
+  closeFormModal,openContact,closeContactModal,toggleStatus,cardSlide,cardImgClick,
+  handleMultiImageUpload,removeImgSlot,closeLightbox,lbZoomIn,lbZoomOut,lbReset,lbPrev,lbNext,
+  setAuthTab,submitAuth,logoutUser,openAccountModal,closeAccountModal,toggleFavorite,
+  setAdminFavView,openAdminFavModal,closeAdminFavModal,goToCard,toggleGridView
+});
+</script>
+</body>
+</html>
