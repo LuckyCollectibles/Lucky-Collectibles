@@ -995,7 +995,7 @@ function renderCards(){
     const images=getCardImages(c);
     const hasMultiple=images.length>1;
     const slides=images.length>0
-      ?images.map(img=>`<div class="slide"><img src="${img}" alt="${c.name||''}"></div>`).join('')
+      ?images.map(img=>`<div class="slide"><img src="${img}" alt="${c.name||''}" loading="lazy"></div>`).join('')
       :`<div class="slide"><div class="placeholder-icon">🃏</div></div>`;
     const counter=hasMultiple?`<span class="slide-counter" id="ctr-${c.id}">1 / ${images.length}</span>`:'';
     const arrows=hasMultiple?`<button class="slide-arrow left" onclick="cardSlide(${c.id},-1,${images.length},event)">‹</button><button class="slide-arrow right" onclick="cardSlide(${c.id},1,${images.length},event)">›</button>`:'';
